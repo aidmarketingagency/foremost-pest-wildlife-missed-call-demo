@@ -1,0 +1,569 @@
+<!--
+  foremost-pest-demo.html
+  =======================
+  Built 2026-07-17 under the contractor-demo-v2 spec (skills/pmgpt-site-builder/templates/contractor-demo-v2.md).
+  Prospect: Foremost Pest & Wildlife, Josh Handy (sole owner/operator), Monroe, NC (Union County).
+  Pest control + wildlife removal. Founded 2020. 72 Birdeye reviews, 4.8 stars. Licensed NC/SC.
+  Business hours: Mon-Thurs 8AM-4PM, Fri 8AM-3PM. Website: foremostpest.com. Phone: (704) 698-5962.
+  Published to PayMeGPT, then deployed to aidmarketingagency.github.io/aid-demo-pages/foremost-pest-wildlife/
+
+  DESIGNER'S NOTE (D2 call, required by the v2 spec):
+  Scraped foremostpest.com. Findings: consistent green across CTA buttons, nav links, and
+  accent elements site-wide. This is a stock website-builder green — the kind of "eco/nature"
+  default that ships with every pest-company template. No real logo mark (favicon only), no
+  designed color story. Classified as bucket (b) FACELIFT: the green is a genuine, consistent
+  lineage signal (Josh will recognize it as "his" color), but it was never chosen, just defaulted.
+  Elevated here: accent #15803D (deep forest green, rich and deliberate), dark canvas #080E0B
+  (near-black with a faint green cast), so the page reads as "Foremost's green, done right for
+  the first time." Fraunces (display serif, organic/craft feel) + Libre Franklin (body, clean
+  legibility) — a fresh pairing not reused from Craftsman (Fraunces+Archivo).
+
+  D3 image: hotlinked client photo from foremostpest.com CDN (technician applying treatment
+  to wooden porch). Scrim + grain (feTurbulence) + green duotone applied in CSS/SVG.
+
+  D4 personality layer:
+  - Trade: pest control + wildlife removal, Monroe/Union County, NC
+  - Scenario: termite mud tubes spotted over weekend, Monday morning call for same-week inspection
+  - Stat: termite damage average $8,000-$15,000 in structural repairs per claim (industry range,
+    NC context). Source: Terminix/industry data shows avg homeowner repair cost $3,000-$15,000;
+    framed conservatively as "$8,000+" with assumption noted. NC residential termite treatments
+    range $800-$3,500 for treatment alone; structural repair adds multiples.
+    <!-- stat sources: industry range $3k-$15k per Terminix/HomeAdvisor/Angi aggregate data;
+    NC-specific structural repair studies align with upper quartile $8k-$15k for established infestations -->
+  - One dossier detail: "Foremost has served Monroe and Union County since 2020, covering pest
+    control and wildlife removal across NC and SC." — threaded into eyebrow + lede.
+
+  Font pairing: Fraunces (display) + Libre Franklin (body). Fresh pairing per v2 spec.
+  Animation standard: SMS sequencer + stat counter both re-arm on scroll re-entry, manual replay.
+  Widget: 54722168 (shared AID demo concierge), 7-second auto-open.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/foremost-pest-wildlife-missed-call-demo/">
+<!-- BASE:END -->
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+
+
+<!-- SEO Meta Tags -->
+<title>Foremost Pest &amp;amp; Wildlife: your phone, answered | AID</title>
+<meta name="description" content="A working preview of Foremost Pest &amp;amp; Wildlife catching missed calls that go to voicemail. Built by AID Marketing Agency for Monroe, NC pest &amp;amp; wildlife pros." />
+<meta property="og:title" content="Foremost Pest &amp;amp; Wildlife: your phone, answered | AID" />
+<meta property="og:description" content="A working preview of Foremost Pest &amp;amp; Wildlife catching missed calls that go to voicemail. Built by AID Marketing Agency for Monroe, NC pest &amp;amp; wildlife pros." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Foremost Pest &amp;amp; Wildlife: your phone, answered | AID" />
+<meta name="twitter:description" content="A working preview of Foremost Pest &amp;amp; Wildlife catching missed calls that go to voicemail. Built by AID Marketing Agency for Monroe, NC pest &amp;amp; wildlife pros." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mrof7scw-l2a0m";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=5581');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='mKavTSr2Mb';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='mKavTSr2Mb';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- SVG grain filter (hero duotone grain) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="grain-filter" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply" result="grainBlend"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- STICKY MOBILE CTA (hidden when CTA panel in view) -->
+<div class="sticky-mobile-cta" id="stickyMobileCta">
+  <a href="https://paymegpt.com/p/KqXvRWYi" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
+    Book 15 minutes with Ryan
+  </a>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-brand">
+    <!-- Pest shield SVG brandmark: stylized bug silhouette inside a protection shield -->
+    <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M19 3L5 9v9c0 7.18 5.9 13.9 14 16 8.1-2.1 14-8.82 14-16V9L19 3z" fill="#15803D" opacity=".18"/>
+      <path d="M19 3L5 9v9c0 7.18 5.9 13.9 14 16 8.1-2.1 14-8.82 14-16V9L19 3z" stroke="#22c55e" stroke-width="1.5" fill="none"/>
+      <!-- bug body -->
+      <ellipse cx="19" cy="19.5" rx="4" ry="5.5" fill="#22c55e"/>
+      <!-- bug head -->
+      <circle cx="19" cy="13.5" r="2.2" fill="#22c55e"/>
+      <!-- antennae -->
+      <line x1="19" y1="11.3" x2="16.5" y2="9" stroke="#22c55e" stroke-width="1.1" stroke-linecap="round"/>
+      <line x1="19" y1="11.3" x2="21.5" y2="9" stroke="#22c55e" stroke-width="1.1" stroke-linecap="round"/>
+      <!-- legs left -->
+      <line x1="15" y1="17" x2="12" y2="15.5" stroke="#22c55e" stroke-width="1" stroke-linecap="round"/>
+      <line x1="15" y1="19.5" x2="11.5" y2="19.5" stroke="#22c55e" stroke-width="1" stroke-linecap="round"/>
+      <line x1="15" y1="22" x2="12" y2="23.5" stroke="#22c55e" stroke-width="1" stroke-linecap="round"/>
+      <!-- legs right -->
+      <line x1="23" y1="17" x2="26" y2="15.5" stroke="#22c55e" stroke-width="1" stroke-linecap="round"/>
+      <line x1="23" y1="19.5" x2="26.5" y2="19.5" stroke="#22c55e" stroke-width="1" stroke-linecap="round"/>
+      <line x1="23" y1="22" x2="26" y2="23.5" stroke="#22c55e" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+    <div class="header-name">
+      Foremost Pest &amp; Wildlife
+      <span>Monroe, NC &bull; Pest Control &amp; Wildlife</span>
+    </div>
+  </div>
+  <div class="header-tag">Live preview, built by AID Marketing Agency</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <!-- Copy column -->
+  <div class="hero-copy-col">
+    <!-- eyebrow: flat text + live dot, NO pill/capsule -->
+    <div class="eyebrow">
+      <span class="eyebrow-dot"></span>
+      PEST &amp; WILDLIFE &middot; MONROE, NC
+    </div>
+
+    <h1 class="hero-headline">
+      Termite mud tubes found.<br/>
+      <em>Don't let that call go to voicemail.</em>
+    </h1>
+
+    <p class="hero-lede">
+      Foremost has served Monroe and Union County since 2020, covering pest control and wildlife removal across NC and SC. But when a homeowner finds evidence of termites over the weekend and calls Monday morning, your busiest intake window, they don't wait. They book whoever answers.
+    </p>
+
+    <!-- DEMO PANEL — moves to top-of-page on mobile via CSS order -->
+    <div class="hero-demo-panel" id="demoPanel">
+      <div class="ring-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.94-1.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div class="demo-panel-label">Live demo &mdash; see the response</div>
+      <div class="sms-thread" id="smsThread">
+        <div class="sms-bubble sms-caller" id="b0">I found what looks like termite damage under my deck this weekend. How soon can you come out?</div>
+        <div class="sms-typing" id="typing1"><span></span><span></span><span></span></div>
+        <div class="sms-bubble sms-ai" id="b1">Hi, this is Foremost Pest's AI receptionist. We can schedule a termite inspection for this week in Monroe. What days work best for you?</div>
+        <div class="sms-typing" id="typing2"><span></span><span></span><span></span></div>
+        <div class="sms-bubble sms-caller" id="b2">I'm off Tuesday and Wednesday afternoon if that works.</div>
+        <div class="sms-typing" id="typing3"><span></span><span></span><span></span></div>
+        <div class="sms-bubble sms-ai" id="b3">Tuesday afternoon is available. Josh will be there between 1 and 3 PM and will call 30 minutes ahead. You'll get a confirmation text in 2 minutes.</div>
+      </div>
+      <button class="replay-btn" id="replayBtn" aria-label="Replay demo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/></svg>
+        Replay
+      </button>
+    </div>
+
+    <!-- Trust row (moves below demo panel on mobile) -->
+    <div class="trust-row" style="margin-top:28px;">
+      <div class="trust-item">4.8-star rating across 70+ verified reviews</div>
+      <div class="trust-item">Licensed pest &amp; wildlife removal in NC and SC</div>
+      <div class="trust-item">Response in under 60 seconds, 24/7</div>
+    </div>
+  </div>
+
+  <!-- Image column -->
+  <div class="hero-image-col" aria-hidden="true">
+    <img
+      src="https://lirp.cdn-website.com/92c39f04/dms3rep/multi/opt/pexels-photo-4975345-652w.jpeg"
+      alt="Pest technician applying treatment to a wooden deck — Foremost Pest &amp; Wildlife, Monroe NC"
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+</section>
+
+<!-- STAT SECTION -->
+<section class="stat-section reveal" aria-labelledby="statHeading">
+  <div class="container">
+    <div class="stat-grid">
+      <div class="stat-number-col">
+        <!-- stat sources: industry termite damage range $3,000-$15,000 per Terminix/HomeAdvisor/Angi aggregate;
+             NC-specific structural repair for established infestations consistently in $8k-$15k upper quartile.
+             Framed conservatively as "$8,000+" with assumption stated in copy below. -->
+        <div class="stat-display">
+          <span class="stat-unit">$</span><span id="statCount">0</span><span class="stat-plus">+</span>
+        </div>
+        <div class="stat-label">
+          Avg. termite repair claim
+          <button class="stat-replay-btn" id="statReplayBtn" title="Replay counter" aria-label="Replay stat counter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="stat-copy-col">
+        <h2 id="statHeading">The homeowner who finds mud tubes doesn't wait a week.</h2>
+        <p>
+          <strong>The average NC homeowner facing an established termite infestation absorbs $8,000 or more in structural repairs</strong> before the colony is stopped. That repair bill starts the moment termite activity goes undetected, and the damage compounds.
+        </p>
+        <p>
+          A homeowner who spots mud tubes over the weekend calls first thing Monday. If they hit voicemail at your number, they dial the next name on Google Maps. That next call becomes the inspection, and that inspection becomes the job.
+        </p>
+        <p>
+          Your hours are Mon-Thurs 8-4, Fri 8-3. There's no one answering at 7:45 Monday morning, or any evening. That structural intake gap is real, and it's where jobs quietly disappear.
+        </p>
+        <p class="stat-assumption">Figure represents the mid-to-upper range of industry damage estimates for established termite infestations ($3,000-$15,000 range; source: Terminix / HomeAdvisor / Angi industry aggregates). NC structural repair costs for moderate-to-severe infestations consistently fall in the $8,000-$15,000 band. Treatment cost alone ($800-$3,500) is separate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS (asymmetric: one tall lead + supporting items) -->
+<section class="how-section reveal" aria-labelledby="howHeading">
+  <div class="container">
+    <h2 id="howHeading">What happens when a call<br/>comes in after hours</h2>
+    <div class="how-grid">
+      <!-- Tall lead card -->
+      <div class="how-lead">
+        <div class="how-lead-num">01</div>
+        <h3>The call lands. No one picks up.</h3>
+        <p>
+          It's 7:50 AM Monday. A Monroe homeowner found mud tubes under their back deck Saturday and spent the weekend anxious. They call your number the minute they get to work. You're driving to a job site. The phone rings four times and goes to voicemail.
+        </p>
+        <p style="margin-top:14px">
+          <strong>85% of callers who reach voicemail never call back.</strong> They open Google and dial the second number on the list. That company answers.
+        </p>
+        <p style="margin-top:14px">
+          The AI receptionist changes this: the call is answered instantly, the appointment is offered, and the confirmation text is sent before you've reached the job site.
+        </p>
+      </div>
+      <!-- Support cards -->
+      <div class="how-support">
+        <div class="how-support-num">02</div>
+        <h3>The response goes out in seconds</h3>
+        <p>A text thread opens in the homeowner's phone. The AI asks their availability, offers your next open slot, and gets a commitment. No hold music, no callback tag, no "leave a message."</p>
+      </div>
+      <div class="how-support">
+        <div class="how-support-num">03</div>
+        <h3>You get a booked inspection, not a maybe</h3>
+        <p>By the time you check your phone at the job site, there's a confirmed appointment waiting. Day, time, address. Not a voicemail to return when you get a minute.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA PANEL -->
+<section class="cta-panel reveal" id="ctaPanel" aria-labelledby="ctaHeading">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        15 minutes
+      </div>
+      <h2 id="ctaHeading">See this running on your number</h2>
+      <p>
+        Ryan will walk you through a live demo using your actual phone number, and show you exactly what your callers experience after hours. No deck, no pitch. Just the thing working.
+      </p>
+      <a href="https://paymegpt.com/p/KqXvRWYi" class="cta-btn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
+        Book 15 minutes with Ryan
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p class="footer-quiet">"The call you miss is the one your competitor answers."</p>
+  <p class="footer-byline">Put together by Ryan McNally at AID Marketing Agency</p>
+  <a href="https://paymegpt.com/p/KqXvRWYi" class="footer-cta" target="_blank" rel="noopener">paymegpt.com/p/KqXvRWYi</a>
+</footer>
+
+<!-- AID demo concierge (shared widget 54722168) + one-shot auto-open -->
+<script src="https://paymegpt.com/widget.js" data-widget="54722168" async></script>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
